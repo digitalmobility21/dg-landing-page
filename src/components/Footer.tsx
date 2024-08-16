@@ -60,7 +60,13 @@ export const Footer = () => {
 					<h3 className='text-lg font-bold'>Legal</h3>
 					{legalLinks.map(item => (
 						<div key={item.title}>
-							<a href={item.href}>{translate(`${item.title}`)}</a>
+							<Link
+								rel='noreferrer noopener'
+								to={`${item.href}`}
+								className='capitalize opacity-60 hover:opacity-100'
+							>
+								{translate(`${item.title}`)}
+							</Link>
 						</div>
 					))}
 				</div>
